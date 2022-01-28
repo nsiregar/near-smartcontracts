@@ -4,7 +4,8 @@ describe("Contract", () => {
   // VIEW method tests
 
   it("says hello Your Name", () => {
-    expect(contract.helloWorld()).toStrictEqual("hello Your Name")
+    let name: string = 'NEAR';
+    expect(contract.helloWorld(name)).toStrictEqual("hello NEAR")
   })
 
   it("reads data", () => {
