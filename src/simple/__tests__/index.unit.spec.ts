@@ -3,9 +3,9 @@ import * as contract from "../assembly";
 describe("Contract", () => {
   // VIEW method tests
 
-  it("says hello to names", () => {
-    let names: string[] = ['NEAR', 'Certified', 'Developer'];
-    expect(contract.helloWorld(names)).toStrictEqual("hello NEAR\nhello Certified\nhello Developer")
+  it("says hello from context", () => {
+    // might be flaky
+    expect(contract.helloWorld()).toStrictEqual("hello carol")
   })
 
   it("reads data", () => {
